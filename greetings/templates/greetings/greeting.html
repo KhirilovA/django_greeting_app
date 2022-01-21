@@ -1,0 +1,35 @@
+{% extends 'greetings/base.html' %}
+
+{% block content %}
+
+<form action="" method="post">
+	{% csrf_token %}
+  <div class="mb-3">
+    <label for="id_first_name" class="form-label"> First Name :</label>
+    <p>{{ form.first_name }}</p>
+    <label for="id_last_name" class="form-label"> Last Name :</label>
+    <p>{{ form.last_name }}</p>
+  </div>
+  <input type="submit" class="btn btn-primary" value="Привітатися">
+</form>
+
+{% if messages %}
+<div>
+    {% for message in messages %}
+    <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+        <div class="alert alert-secondary" role="alert">
+  			{{ message }}
+  		</div>
+        {% endif %}
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+        <div class="alert alert-primary" role="alert">
+  			{{ message }}
+  		</div>
+        {% endif %}
+        
+    <p>
+    {% endfor %}
+</div>
+{% endif %}
+{% endblock %}
