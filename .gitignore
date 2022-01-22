@@ -3,3 +3,4 @@ __pycache__
 *.pyc
 staticfiles
 venv/Scripts/activate
+.env.dev
