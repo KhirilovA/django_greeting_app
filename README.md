@@ -1,6 +1,7 @@
-# Greeting app
+[![Actions Status](https://github.com/KhirilovA/django_greeting_app/actions/workflows/CI/badge.svg)]
 
-<img src='https://github.com/KhirilovA/django_greeting_app/actions/workflows/CI/badge.svg&branch=master'>
+
+# Greeting app
 
 This project is to greet people who past their First and Last names
 
