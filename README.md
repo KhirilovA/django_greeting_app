@@ -33,3 +33,7 @@ To run localy you need to clone the repository
  ```
  python manage.py runserver
  ```
+
+
+## License
+MIT
