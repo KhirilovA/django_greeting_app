@@ -1,4 +1,4 @@
-[![Actions Status](https://github.com/KhirilovA/django_greeting_app/workflows/CI/badge.svg)](https://github.com/KhirilovA/django_greeting_app/actions)
+[![Actions Status](https://github.com/KhirilovA/django_greeting_app/workflows/Build%20and%20Test/badge.svg)](https://github.com/KhirilovA/django_greeting_app/actions)
 
 
 # Greeting app
