@@ -5,4 +5,3 @@ staticfiles
 venv/Scripts/activate
 .env.dev
 app
-setup.cfg
