@@ -15,9 +15,9 @@ jobs:
       postgres:
         image: postgres
         env:
-          POSTGRES_USER: username
-          POSTGRES_PASSWORD: password
-          POSTGRES_DB: greetings
+          SQL_USER: username
+          SQL_PASSWORD: password
+          SQL_DATABASE: greetings
           DJANGO_ALLOWED_HOSTS: localhost 127.0.0.1 [::1]
         ports:
           - 5432:5432
