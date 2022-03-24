@@ -33,4 +33,3 @@ class ModelTesting(TestCase):
         form = NameForm(data={})
 
         self.assertFalse(form.is_valid())
-        
