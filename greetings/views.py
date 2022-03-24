@@ -16,13 +16,13 @@ class GreetingView(CreateView):
         try:
             return super().form_valid(form)
         except Exception:
-            messages.error(self.request, 
-                f"Seen you, {form.cleaned_data['first_name']}")
+            messages.error(self.request,
+                           f"Seen you, {form.cleaned_data['first_name']}")
             return super().form_invalid(form)
         finally:
             if not messages.get_messages(self.request):
-                messages.success(self.request, 
-                    f"Hi, {form.cleaned_data['first_name']} {form.cleaned_data['last_name']}")
+                messages.success(self.request,
+                                 f"Hi, {form.cleaned_data['first_name']} {form.cleaned_data['last_name']}")
 
     def get_success_url(self):
         return reverse('greeting')
