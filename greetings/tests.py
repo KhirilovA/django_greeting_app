@@ -33,12 +33,4 @@ class ModelTesting(TestCase):
         form = NameForm(data={})
 
         self.assertFalse(form.is_valid())
-
-    def test_names_form_invalid_2(self):
-        form = NameForm(data={
-            'first_name': 'Illia',
-            'last_name': 'Sagashvili'
-            })
-
-        # invalid cause Bob Fisher is in Database
-        self.assertFalse(form.is_valid())
+        
