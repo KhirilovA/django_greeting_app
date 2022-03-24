@@ -36,8 +36,8 @@ class ModelTesting(TestCase):
 
     def test_names_form_invalid_2(self):
         form = NameForm(data={
-            'first_name': 'Bob',
-            'last_name': 'Fisher'
+            'first_name': 'Illia',
+            'last_name': 'Sagashvili'
             })
 
         # invalid cause Bob Fisher is in Database
