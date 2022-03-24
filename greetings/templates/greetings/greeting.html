@@ -6,7 +6,7 @@
 <form action="" method="post">
 	{% csrf_token %}
   <div class="mb-3">
-    <label for="id_first_name" class="form-label">{% translate "First Name :" %}</label>
+    <label for="id_first_name" class="form-label">{% trans "First Name :" %}</label>
     <p>{{ form.first_name }}</p>
     <label for="id_last_name" class="form-label"> Last Name :</label>
     <p>{{ form.last_name }}</p>

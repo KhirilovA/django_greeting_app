@@ -2,7 +2,6 @@ from django.views.generic import CreateView
 from django.views.generic.list import ListView
 from django.contrib import messages
 from django.urls import reverse
-from django.utils.translation import gettext as _
 
 from .models import Names
 from .forms import NameForm
@@ -17,11 +16,13 @@ class GreetingView(CreateView):
         try:
             return super().form_valid(form)
         except Exception:
-            messages.error(self.request, f"Seen you, {form.cleaned_data['first_name']}")
+            messages.error(self.request, 
+                f"Seen you, {form.cleaned_data['first_name']}")
             return super().form_invalid(form)
         finally:
             if not messages.get_messages(self.request):
-                messages.success(self.request, f"Hi, {form.cleaned_data['first_name']} {form.cleaned_data['last_name']}")
+                messages.success(self.request, 
+                    f"Hi, {form.cleaned_data['first_name']} {form.cleaned_data['last_name']}")
 
     def get_success_url(self):
         return reverse('greeting')

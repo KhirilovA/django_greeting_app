@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 
+from django.utils.translation import gettext_lazy as _
 import dj_database_url
 import os
 
@@ -137,9 +138,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-from django.utils.translation import gettext_lazy as _
-
-LANGUAGE_CODE='en'
+LANGUAGE_CODE = 'en'
 
 LANGUAGES = [
     ('en', _('English')),
